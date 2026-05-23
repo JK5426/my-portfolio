@@ -12,17 +12,20 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
+    // Apply the 'dark' class to the html element for Tailwind's dark: utilities
     if (darkMode) {
       document.documentElement.classList.add('dark');
+      document.documentElement.style.colorScheme = 'dark';
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.style.colorScheme = 'light';
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  const toggleDarkMode = () => setDarkMode(prev => !prev);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div className={`min-h-screen ${darkMode ? 'dark' : ''} bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300`}>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <Hero />
