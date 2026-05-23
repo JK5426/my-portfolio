@@ -9,7 +9,7 @@ import Awards from './components/Awards';
 import Footer from './components/Footer';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     // Apply the 'dark' class to the html element for Tailwind's dark: utilities
