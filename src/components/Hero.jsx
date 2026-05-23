@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, GitHub, LinkedIn, FileText } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin, FileText } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 
 const Hero = () => {
@@ -23,10 +23,10 @@ const Hero = () => {
             <Mail size={18} /> Contact Me
           </a>
           <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-full hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors">
-            <GitHub size={18} /> GitHub
+            <Github size={18} /> GitHub
           </a>
           <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-full hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors">
-            <LinkedIn size={18} /> LinkedIn
+            <Linkedin size={18} /> LinkedIn
           </a>
         </div>
 
